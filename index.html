@@ -9,8 +9,8 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --navy: #0d1f3c;
-      --navy-mid: #162e55;
+      --navy: #0D2137;
+      --navy-mid: #112840;
       --teal: #00b8a2;
       --teal-light: #00d4bb;
       --gold: #f4c842;
@@ -32,14 +32,11 @@
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
       display: flex; align-items: center; justify-content: space-between;
       padding: 1.2rem 5%;
-      background: rgba(13,31,60,0.96);
+      background: rgba(13,33,55,0.97);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid rgba(0,184,162,0.2);
     }
-    .nav-logo {
-      font-family: 'DM Serif Display', serif;
-      font-size: 1.5rem; color: #fff; letter-spacing: -0.5px;
-    }
+    .nav-logo { font-family: 'DM Serif Display', serif; font-size: 1.5rem; color: #fff; letter-spacing: -0.5px; }
     .nav-logo span { color: var(--teal); }
     .nav-cta {
       background: var(--teal); color: #fff; border: none;
@@ -49,15 +46,12 @@
     }
     .nav-cta:hover { background: var(--teal-light); transform: translateY(-1px); }
 
-    /* ── PAGES ── */
     .page { display: none; min-height: 100vh; }
     .page.active { display: block; }
 
     /* ══════════════════════
-       LANDING PAGE
+       HERO
     ══════════════════════ */
-
-    /* HERO */
     .hero {
       min-height: 100vh;
       background: var(--navy);
@@ -74,8 +68,7 @@
     }
     .hero-grid {
       position: absolute; inset: 0; opacity: 0.04;
-      background-image: linear-gradient(var(--teal) 1px, transparent 1px),
-                        linear-gradient(90deg, var(--teal) 1px, transparent 1px);
+      background-image: linear-gradient(var(--teal) 1px, transparent 1px), linear-gradient(90deg, var(--teal) 1px, transparent 1px);
       background-size: 60px 60px;
     }
     .hero-inner {
@@ -89,8 +82,7 @@
       border-radius: 50px; padding: 0.4rem 1rem;
       color: var(--teal); font-size: 0.8rem; font-weight: 600;
       letter-spacing: 0.05em; text-transform: uppercase;
-      margin-bottom: 1.5rem;
-      animation: fadeUp 0.6s ease both;
+      margin-bottom: 1.5rem; animation: fadeUp 0.6s ease both;
     }
     .hero-badge::before { content: '●'; font-size: 0.6rem; }
     h1 {
@@ -108,15 +100,9 @@
       display: flex; flex-wrap: wrap; gap: 1.25rem; margin-bottom: 2.5rem;
       animation: fadeUp 0.7s 0.25s ease both;
     }
-    .trust-pill {
-      display: flex; align-items: center; gap: 0.45rem;
-      color: rgba(255,255,255,0.65); font-size: 0.85rem;
-    }
+    .trust-pill { display: flex; align-items: center; gap: 0.45rem; color: rgba(255,255,255,0.65); font-size: 0.85rem; }
     .trust-pill .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--teal); }
-    .hero-actions {
-      display: flex; gap: 1rem; flex-wrap: wrap;
-      animation: fadeUp 0.7s 0.3s ease both;
-    }
+    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; animation: fadeUp 0.7s 0.3s ease both; }
     .btn-primary {
       background: var(--teal); color: #fff; border: none;
       padding: 0.95rem 2rem; border-radius: 50px;
@@ -136,11 +122,9 @@
 
     /* Score card mockup */
     .score-card {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(0,184,162,0.25);
+      background: rgba(255,255,255,0.05); border: 1px solid rgba(0,184,162,0.25);
       border-radius: 24px; padding: 2.5rem;
-      backdrop-filter: blur(20px);
-      animation: fadeUp 0.8s 0.2s ease both;
+      backdrop-filter: blur(20px); animation: fadeUp 0.8s 0.2s ease both;
     }
     .score-label { color: rgba(255,255,255,0.5); font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem; }
     .score-title { color: #fff; font-family: 'DM Serif Display', serif; font-size: 1.4rem; margin-bottom: 2rem; }
@@ -150,15 +134,12 @@
       background: conic-gradient(var(--teal) 0% 78%, rgba(255,255,255,0.08) 78% 100%);
       display: flex; align-items: center; justify-content: center; position: relative;
     }
-    .score-ring::before { content: ''; position: absolute; inset: 14px; border-radius: 50%; background: #0d1f3c; }
+    .score-ring::before { content: ''; position: absolute; inset: 14px; border-radius: 50%; background: var(--navy); }
     .score-number { position: relative; z-index: 1; text-align: center; }
     .score-number strong { display: block; font-size: 2.4rem; font-weight: 700; color: var(--teal); line-height: 1; }
     .score-number span { color: rgba(255,255,255,0.5); font-size: 0.75rem; }
     .score-metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
-    .metric {
-      background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 12px; padding: 0.85rem 1rem;
-    }
+    .metric { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 0.85rem 1rem; }
     .metric-name { color: rgba(255,255,255,0.45); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.3rem; }
     .metric-val { color: #fff; font-weight: 600; font-size: 0.95rem; }
     .metric-bar { height: 4px; border-radius: 2px; background: rgba(255,255,255,0.1); margin-top: 0.5rem; overflow: hidden; }
@@ -171,7 +152,6 @@
     h2 { font-family: 'DM Serif Display', serif; font-size: clamp(2rem, 4vw, 2.8rem); line-height: 1.15; margin-bottom: 1rem; }
     .section-sub { color: var(--slate); font-size: 1.05rem; line-height: 1.7; max-width: 580px; margin-bottom: 3.5rem; }
 
-    /* Steps */
     .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
     .step {
       background: #fff; border-radius: 20px; padding: 2rem;
@@ -179,31 +159,21 @@
       transition: transform 0.2s, box-shadow 0.2s;
     }
     .step:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.1); }
-    .step-num {
-      width: 44px; height: 44px; border-radius: 12px;
-      background: var(--navy); color: var(--teal);
-      display: flex; align-items: center; justify-content: center;
-      font-weight: 700; font-size: 1.1rem; margin-bottom: 1.25rem;
-    }
+    .step-num { width: 44px; height: 44px; border-radius: 12px; background: var(--navy); color: var(--teal); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.1rem; margin-bottom: 1.25rem; }
     .step h3 { font-family: 'DM Serif Display', serif; font-size: 1.2rem; margin-bottom: 0.6rem; }
     .step p { color: var(--slate); font-size: 0.92rem; line-height: 1.65; }
 
-    /* Who section */
     .who { background: var(--navy); color: #fff; }
     .who h2 { color: #fff; }
     .who .section-sub { color: rgba(255,255,255,0.55); }
     .audience-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
-    .audience-card {
-      border: 1px solid rgba(0,184,162,0.2); border-radius: 20px; padding: 2.2rem;
-      transition: border-color 0.2s, background 0.2s;
-    }
+    .audience-card { border: 1px solid rgba(0,184,162,0.2); border-radius: 20px; padding: 2.2rem; transition: border-color 0.2s, background 0.2s; }
     .audience-card:hover { border-color: var(--teal); background: rgba(0,184,162,0.06); }
     .audience-icon { font-size: 2.2rem; margin-bottom: 1rem; }
     .audience-card h3 { font-family: 'DM Serif Display', serif; font-size: 1.3rem; margin-bottom: 0.6rem; color: #fff; }
     .audience-card p { color: rgba(255,255,255,0.55); font-size: 0.92rem; line-height: 1.65; }
     .audience-card ul { color: rgba(255,255,255,0.55); font-size: 0.88rem; line-height: 1.8; padding-left: 1.1rem; margin-top: 0.75rem; }
 
-    /* Ratings */
     .ratings-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; }
     .rating-chip { border-radius: 16px; padding: 1.5rem; text-align: center; }
     .rating-chip .chip-label { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
@@ -213,66 +183,34 @@
     .chip-c { background: #fef9e7; color: #8a6a00; }
     .chip-d { background: #fff2e8; color: #8a3a00; }
 
-    /* Referral section */
     .ref-section { background: var(--light); }
     .ref-inner { max-width: 700px; margin: 0 auto; text-align: center; }
-    .ref-box {
-      background: #fff; border-radius: 20px; padding: 2rem;
-      border: 1px solid rgba(0,184,162,0.15);
-      box-shadow: 0 4px 20px rgba(0,0,0,0.06); margin-top: 2rem;
-    }
+    .ref-box { background: #fff; border-radius: 20px; padding: 2rem; border: 1px solid rgba(0,184,162,0.15); box-shadow: 0 4px 20px rgba(0,0,0,0.06); margin-top: 2rem; }
     .ref-box label { display: block; color: var(--slate); font-size: 0.85rem; font-weight: 600; margin-bottom: 0.6rem; text-align: left; }
     .ref-row { display: flex; gap: 0.6rem; }
-    .ref-input {
-      flex: 1; border: 1px solid #dde3ea; border-radius: 50px;
-      padding: 0.75rem 1.1rem; font-family: 'DM Sans', sans-serif; font-size: 0.9rem;
-      outline: none; transition: border-color 0.2s;
-    }
+    .ref-input { flex: 1; border: 1px solid #dde3ea; border-radius: 50px; padding: 0.75rem 1.1rem; font-family: 'DM Sans', sans-serif; font-size: 0.9rem; outline: none; transition: border-color 0.2s; }
     .ref-input:focus { border-color: var(--teal); }
-    .ref-gen-btn {
-      background: var(--navy); color: #fff; border: none;
-      padding: 0.75rem 1.4rem; border-radius: 50px;
-      font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 0.88rem;
-      cursor: pointer; transition: all 0.2s; white-space: nowrap;
-    }
+    .ref-gen-btn { background: var(--navy); color: #fff; border: none; padding: 0.75rem 1.4rem; border-radius: 50px; font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 0.88rem; cursor: pointer; transition: all 0.2s; white-space: nowrap; }
     .ref-gen-btn:hover { background: var(--navy-mid); }
     .ref-result { display: none; margin-top: 1rem; }
-    .ref-link-box {
-      display: flex; gap: 0.5rem; align-items: center;
-      background: var(--light); border: 1px solid rgba(0,184,162,0.2);
-      border-radius: 12px; padding: 0.75rem 1rem; margin-top: 0.75rem;
-    }
+    .ref-link-box { display: flex; gap: 0.5rem; align-items: center; background: var(--light); border: 1px solid rgba(0,184,162,0.2); border-radius: 12px; padding: 0.75rem 1rem; margin-top: 0.75rem; }
     .ref-link-text { flex: 1; color: var(--navy); font-size: 0.85rem; word-break: break-all; }
-    .copy-btn {
-      background: var(--teal); color: #fff; border: none;
-      padding: 0.5rem 1rem; border-radius: 8px;
-      font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 0.78rem;
-      cursor: pointer; white-space: nowrap; transition: all 0.2s;
-    }
+    .copy-btn { background: var(--teal); color: #fff; border: none; padding: 0.5rem 1rem; border-radius: 8px; font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 0.78rem; cursor: pointer; white-space: nowrap; transition: all 0.2s; }
     .copy-btn:hover { background: var(--teal-light); }
     .ref-note { color: var(--slate); font-size: 0.8rem; margin-top: 0.6rem; }
 
-    /* Waitlist / CTA */
     .waitlist { background: linear-gradient(135deg, var(--navy) 0%, #0a3252 100%); position: relative; overflow: hidden; }
-    .waitlist::before {
-      content: ''; position: absolute; inset: 0;
-      background: radial-gradient(ellipse 50% 80% at 90% 50%, rgba(0,184,162,0.15) 0%, transparent 65%);
-    }
+    .waitlist::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 50% 80% at 90% 50%, rgba(0,184,162,0.15) 0%, transparent 65%); }
     .waitlist .section-inner { position: relative; z-index: 2; text-align: center; max-width: 680px; }
     .waitlist h2 { color: #fff; margin-bottom: 1rem; }
     .waitlist .section-sub { color: rgba(255,255,255,0.6); margin: 0 auto 2rem; }
-    .privacy-note { color: rgba(255,255,255,0.3); font-size: 0.78rem; margin-top: 1rem; }
 
-    /* Stats row */
     .stats-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3.5rem; }
     .stat-item { text-align: center; }
     .stat-num { font-family: 'DM Serif Display', serif; font-size: 2.4rem; color: var(--teal); }
     .stat-desc { color: rgba(255,255,255,0.5); font-size: 0.88rem; margin-top: 0.25rem; }
 
-    footer {
-      background: #080f1e; color: rgba(255,255,255,0.35);
-      text-align: center; padding: 2rem 5%; font-size: 0.85rem; line-height: 1.7;
-    }
+    footer { background: #080f1e; color: rgba(255,255,255,0.35); text-align: center; padding: 2rem 5%; font-size: 0.85rem; line-height: 1.7; }
     footer span { color: var(--teal); }
 
     /* ══════════════════════
@@ -297,69 +235,33 @@
 
     .field { margin-bottom: 1.25rem; }
     .field label { display: block; font-weight: 600; font-size: 0.85rem; color: var(--navy); margin-bottom: 0.45rem; }
-    .field input, .field select {
-      width: 100%; border: 1px solid #dde3ea; border-radius: 12px;
-      padding: 0.85rem 1rem; font-family: 'DM Sans', sans-serif; font-size: 0.95rem;
-      outline: none; transition: border-color 0.2s; background: #fff;
-    }
+    .field input, .field select { width: 100%; border: 1px solid #dde3ea; border-radius: 12px; padding: 0.85rem 1rem; font-family: 'DM Sans', sans-serif; font-size: 0.95rem; outline: none; transition: border-color 0.2s; background: #fff; }
     .field input:focus, .field select:focus { border-color: var(--teal); }
     .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
 
     .choices { display: grid; gap: 0.65rem; }
-    .choice-item {
-      display: flex; align-items: center; gap: 0.75rem;
-      background: #fff; border: 1.5px solid #dde3ea; border-radius: 12px;
-      padding: 0.85rem 1rem; cursor: pointer; transition: all 0.15s;
-    }
+    .choice-item { display: flex; align-items: center; gap: 0.75rem; background: #fff; border: 1.5px solid #dde3ea; border-radius: 12px; padding: 0.85rem 1rem; cursor: pointer; transition: all 0.15s; }
     .choice-item:hover { border-color: var(--teal); background: var(--light); }
     .choice-item.selected { border-color: var(--teal); background: rgba(0,184,162,0.06); }
-    .choice-dot {
-      width: 18px; height: 18px; border-radius: 50%;
-      border: 2px solid #c8d0dc; flex-shrink: 0; transition: all 0.15s;
-      display: flex; align-items: center; justify-content: center;
-    }
+    .choice-dot { width: 18px; height: 18px; border-radius: 50%; border: 2px solid #c8d0dc; flex-shrink: 0; transition: all 0.15s; display: flex; align-items: center; justify-content: center; }
     .choice-item.selected .choice-dot { border-color: var(--teal); background: var(--teal); }
     .choice-item.selected .choice-dot::after { content:''; width: 6px; height: 6px; border-radius: 50%; background: #fff; }
     .choice-label { font-size: 0.92rem; font-weight: 500; }
 
-    .consent-box {
-      background: #fff; border: 1px solid #dde3ea; border-radius: 14px; padding: 1.25rem;
-      font-size: 0.84rem; color: var(--slate); line-height: 1.65; margin-bottom: 1.25rem;
-    }
+    .consent-box { background: #fff; border: 1px solid #dde3ea; border-radius: 14px; padding: 1.25rem; font-size: 0.84rem; color: var(--slate); line-height: 1.65; margin-bottom: 1.25rem; }
     .consent-check { display: flex; gap: 0.75rem; align-items: flex-start; cursor: pointer; }
     .consent-check input { margin-top: 3px; accent-color: var(--teal); }
     .consent-check span { font-size: 0.88rem; color: var(--slate); }
 
     .form-nav { display: flex; justify-content: space-between; align-items: center; margin-top: 2rem; }
-    .back-btn {
-      background: none; border: 1px solid #dde3ea; border-radius: 50px;
-      padding: 0.75rem 1.5rem; font-family: 'DM Sans', sans-serif; font-size: 0.9rem;
-      color: var(--slate); cursor: pointer; transition: all 0.2s;
-    }
+    .back-btn { background: none; border: 1px solid #dde3ea; border-radius: 50px; padding: 0.75rem 1.5rem; font-family: 'DM Sans', sans-serif; font-size: 0.9rem; color: var(--slate); cursor: pointer; transition: all 0.2s; }
     .back-btn:hover { border-color: var(--navy); color: var(--navy); }
-    .next-btn {
-      background: var(--navy); color: #fff; border: none;
-      border-radius: 50px; padding: 0.9rem 2rem;
-      font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 0.95rem;
-      cursor: pointer; transition: all 0.2s; margin-left: auto;
-    }
+    .next-btn { background: var(--navy); color: #fff; border: none; border-radius: 50px; padding: 0.9rem 2rem; font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 0.95rem; cursor: pointer; transition: all 0.2s; margin-left: auto; }
     .next-btn:hover { background: var(--navy-mid); transform: translateY(-1px); }
-    .submit-btn {
-      background: var(--teal); color: #fff; border: none;
-      border-radius: 50px; padding: 1rem 2.5rem;
-      font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 1rem;
-      cursor: pointer; transition: all 0.2s;
-      box-shadow: 0 6px 24px rgba(0,184,162,0.3); width: 100%;
-    }
+    .submit-btn { background: var(--teal); color: #fff; border: none; border-radius: 50px; padding: 1rem 2.5rem; font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 6px 24px rgba(0,184,162,0.3); width: 100%; }
     .submit-btn:hover { background: var(--teal-light); }
     .submit-btn:disabled { opacity: 0.4; cursor: not-allowed; }
-
-    .ssn-note {
-      display: flex; gap: 0.5rem; align-items: flex-start;
-      background: rgba(0,184,162,0.07); border: 1px solid rgba(0,184,162,0.15);
-      border-radius: 10px; padding: 0.75rem 0.9rem;
-      font-size: 0.8rem; color: var(--slate); margin-top: 0.6rem;
-    }
+    .ssn-note { display: flex; gap: 0.5rem; align-items: flex-start; background: rgba(0,184,162,0.07); border: 1px solid rgba(0,184,162,0.15); border-radius: 10px; padding: 0.75rem 0.9rem; font-size: 0.8rem; color: var(--slate); margin-top: 0.6rem; }
     .ssn-note::before { content: '🔒'; flex-shrink: 0; }
 
     /* ══════════════════════
@@ -373,28 +275,18 @@
     .results-header p { color: rgba(255,255,255,0.5); font-size: 0.9rem; }
 
     .big-ring-wrap { display: flex; justify-content: center; margin-bottom: 2rem; }
-    .big-ring {
-      width: 200px; height: 200px; border-radius: 50%; position: relative;
-      display: flex; align-items: center; justify-content: center;
-    }
+    .big-ring { width: 200px; height: 200px; border-radius: 50%; position: relative; display: flex; align-items: center; justify-content: center; }
     .big-ring::before { content:''; position: absolute; inset: 16px; border-radius: 50%; background: var(--navy); z-index: 1; }
     .big-ring-inner { position: relative; z-index: 2; text-align: center; }
     .big-score { font-size: 3.5rem; font-weight: 700; color: var(--teal); line-height: 1; display: block; }
     .big-label { color: rgba(255,255,255,0.45); font-size: 0.8rem; }
 
-    .status-badge {
-      display: block; width: fit-content; margin: 0 auto 2rem;
-      padding: 0.5rem 1.4rem; border-radius: 50px;
-      font-weight: 700; font-size: 0.9rem; text-align: center;
-    }
+    .status-badge { display: block; width: fit-content; margin: 0 auto 2rem; padding: 0.5rem 1.4rem; border-radius: 50px; font-weight: 700; font-size: 0.9rem; text-align: center; }
     .status-green { background: rgba(0,184,162,0.15); color: var(--teal); border: 1px solid rgba(0,184,162,0.3); }
     .status-yellow { background: rgba(244,200,66,0.15); color: var(--gold); border: 1px solid rgba(244,200,66,0.3); }
     .status-red { background: rgba(224,92,92,0.15); color: #e05c5c; border: 1px solid rgba(224,92,92,0.3); }
 
-    .factor-card {
-      background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 20px; padding: 1.75rem; margin-bottom: 1.25rem;
-    }
+    .factor-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; padding: 1.75rem; margin-bottom: 1.25rem; }
     .factor-card h3 { color: #fff; font-family: 'DM Serif Display', serif; font-size: 1.1rem; margin-bottom: 1.25rem; }
     .factor-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.9rem; }
     .factor-name { color: rgba(255,255,255,0.6); font-size: 0.85rem; }
@@ -406,38 +298,24 @@
     .fbar-fill.red { background: #e05c5c; }
 
     .loan-chips { display: flex; flex-wrap: wrap; gap: 0.65rem; margin-top: 0.5rem; }
-    .loan-chip {
-      background: rgba(0,184,162,0.12); border: 1px solid rgba(0,184,162,0.25);
-      color: var(--teal); border-radius: 50px; padding: 0.4rem 1rem;
-      font-size: 0.82rem; font-weight: 600;
-    }
+    .loan-chip { background: rgba(0,184,162,0.12); border: 1px solid rgba(0,184,162,0.25); color: var(--teal); border-radius: 50px; padding: 0.4rem 1rem; font-size: 0.82rem; font-weight: 600; }
 
-    .next-steps-card {
-      background: rgba(255,255,255,0.05); border: 1px solid rgba(0,184,162,0.2);
-      border-radius: 20px; padding: 1.75rem; margin-bottom: 1.25rem;
-    }
+    .next-steps-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(0,184,162,0.2); border-radius: 20px; padding: 1.75rem; margin-bottom: 1.25rem; }
     .next-steps-card h3 { color: #fff; font-family: 'DM Serif Display', serif; font-size: 1.1rem; margin-bottom: 1rem; }
-    .next-step-item {
-      display: flex; gap: 0.75rem; align-items: flex-start;
-      padding: 0.8rem 0; border-bottom: 1px solid rgba(255,255,255,0.07);
-    }
+    .next-step-item { display: flex; gap: 0.75rem; align-items: flex-start; padding: 0.8rem 0; border-bottom: 1px solid rgba(255,255,255,0.07); }
     .next-step-item:last-child { border-bottom: none; padding-bottom: 0; }
     .nsi-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 1px; }
     .nsi-text { color: rgba(255,255,255,0.7); font-size: 0.88rem; line-height: 1.6; }
     .nsi-text strong { color: #fff; }
 
     .results-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.5rem; }
-    .action-btn {
-      border-radius: 14px; padding: 1rem; font-family: 'DM Sans', sans-serif;
-      font-weight: 600; font-size: 0.88rem; cursor: pointer; transition: all 0.2s; text-align: center;
-    }
+    .action-btn { border-radius: 14px; padding: 1rem; font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 0.88rem; cursor: pointer; transition: all 0.2s; text-align: center; }
     .action-primary { background: var(--teal); color: #fff; border: none; box-shadow: 0 6px 20px rgba(0,184,162,0.3); }
     .action-primary:hover { background: var(--teal-light); transform: translateY(-2px); }
     .action-secondary { background: transparent; color: rgba(255,255,255,0.7); border: 1px solid rgba(255,255,255,0.2); }
     .action-secondary:hover { border-color: var(--teal); color: var(--teal); }
     .retake-btn { display: block; text-align: center; margin-top: 1.5rem; color: rgba(255,255,255,0.3); font-size: 0.8rem; cursor: pointer; text-decoration: underline; }
     .retake-btn:hover { color: rgba(255,255,255,0.6); }
-
     .ref-banner { background: rgba(244,200,66,0.08); border: 1px solid rgba(244,200,66,0.2); border-radius: 16px; padding: 1.25rem; margin-bottom: 1.25rem; display: none; }
     .ref-banner.show { display: block; }
     .ref-banner p { color: rgba(255,255,255,0.65); font-size: 0.85rem; }
@@ -461,7 +339,6 @@
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <div class="nav-logo">Cred<span>Path</span></div>
   <button class="nav-cta" onclick="showForm()">Check My Readiness</button>
@@ -471,8 +348,6 @@
      LANDING PAGE
 ══════════════════════════════ -->
 <div id="page-landing" class="page active">
-
-  <!-- HERO -->
   <section class="hero">
     <div class="hero-grid"></div>
     <div class="hero-inner">
@@ -496,10 +371,7 @@
           <div class="score-title">Marcus T. — First-Time Buyer</div>
           <div class="score-ring-wrap">
             <div class="score-ring">
-              <div class="score-number">
-                <strong>78</strong>
-                <span>out of 100</span>
-              </div>
+              <div class="score-number"><strong>78</strong><span>out of 100</span></div>
             </div>
           </div>
           <div class="score-metrics">
@@ -513,33 +385,19 @@
     </div>
   </section>
 
-  <!-- HOW IT WORKS -->
   <section class="section" id="how">
     <div class="section-inner">
       <div class="section-tag">How It Works</div>
       <h2>From soft pull to readiness score in under 60 seconds</h2>
       <p class="section-sub">No hard inquiry. No damage to your credit. Just a clear picture of where you stand before you apply.</p>
       <div class="steps">
-        <div class="step">
-          <div class="step-num">1</div>
-          <h3>Secure Soft Pull</h3>
-          <p>Enter basic info and authorize a soft credit inquiry. Completely invisible to lenders and zero impact to your credit score.</p>
-        </div>
-        <div class="step">
-          <div class="step-num">2</div>
-          <h3>Multi-Factor Analysis</h3>
-          <p>We evaluate credit score, DTI ratio, payment history, credit age, and derogatory marks — plus your income for a complete picture.</p>
-        </div>
-        <div class="step">
-          <div class="step-num">3</div>
-          <h3>Your Readiness Score</h3>
-          <p>Get a CredPath Score (0–100), estimated home price range, likely loan programs, and a shareable report for your realtor or lender.</p>
-        </div>
+        <div class="step"><div class="step-num">1</div><h3>Secure Soft Pull</h3><p>Enter basic info and authorize a soft credit inquiry. Completely invisible to lenders and zero impact to your credit score.</p></div>
+        <div class="step"><div class="step-num">2</div><h3>Multi-Factor Analysis</h3><p>We evaluate credit score, DTI ratio, payment history, credit age, and derogatory marks — plus your income for a complete picture.</p></div>
+        <div class="step"><div class="step-num">3</div><h3>Your Readiness Score</h3><p>Get a CredPath Score (0–100), estimated home price range, likely loan programs, and a shareable report for your realtor or lender.</p></div>
       </div>
     </div>
   </section>
 
-  <!-- RATINGS -->
   <section class="section" style="padding-top:0;">
     <div class="section-inner">
       <div class="section-tag">Readiness Ratings</div>
@@ -554,62 +412,30 @@
     </div>
   </section>
 
-  <!-- WHO IT'S FOR -->
   <section class="section who">
     <div class="section-inner">
       <div class="section-tag" style="color:var(--teal)">Who It's For</div>
       <h2>Built for everyone in the home buying journey</h2>
       <p class="section-sub">One platform — three powerful perspectives on buyer readiness.</p>
       <div class="audience-grid">
-        <div class="audience-card">
-          <div class="audience-icon">🏠</div>
-          <h3>Home Buyers</h3>
-          <p>Know exactly where you stand before talking to a lender. Stop guessing, start planning.</p>
-          <ul>
-            <li>Soft pull — no score impact</li>
-            <li>DTI & affordability estimate</li>
-            <li>Personalized action plan</li>
-            <li>Shareable report</li>
-          </ul>
-        </div>
-        <div class="audience-card">
-          <div class="audience-icon">🤝</div>
-          <h3>Realtors</h3>
-          <p>Pre-qualify your leads smarter. Show clients only homes within reach and close faster.</p>
-          <ul>
-            <li>Personal referral screening link</li>
-            <li>Buyer reports sent to you</li>
-            <li>Filter serious buyers instantly</li>
-            <li>Save time on showings</li>
-          </ul>
-        </div>
-        <div class="audience-card">
-          <div class="audience-icon">🏦</div>
-          <h3>Loan Officers</h3>
-          <p>Identify and nurture prospects earlier. Avoid costly pulls on unqualified applicants.</p>
-          <ul>
-            <li>Screen before the $60 hard pull</li>
-            <li>Receive buyer readiness reports</li>
-            <li>Focus on serious applicants</li>
-            <li>Save thousands per month</li>
-          </ul>
-        </div>
+        <div class="audience-card"><div class="audience-icon">🏠</div><h3>Home Buyers</h3><p>Know exactly where you stand before talking to a lender. Stop guessing, start planning.</p><ul><li>Soft pull — no score impact</li><li>DTI & affordability estimate</li><li>Personalized action plan</li><li>Shareable report</li></ul></div>
+        <div class="audience-card"><div class="audience-icon">🤝</div><h3>Realtors</h3><p>Pre-qualify your leads smarter. Show clients only homes within reach and close faster.</p><ul><li>Personal referral screening link</li><li>Buyer reports sent to you</li><li>Filter serious buyers instantly</li><li>Save time on showings</li></ul></div>
+        <div class="audience-card"><div class="audience-icon">🏦</div><h3>Loan Officers</h3><p>Identify prospects earlier. Avoid costly pulls on unqualified applicants.</p><ul><li>Screen before the $60 hard pull</li><li>Receive buyer readiness reports</li><li>Focus on serious applicants</li><li>Save thousands per month</li></ul></div>
       </div>
       <div class="stats-row">
         <div class="stat-item"><div class="stat-num">0</div><div class="stat-desc">Impact on credit score</div></div>
         <div class="stat-item"><div class="stat-num">5</div><div class="stat-desc">Factors analyzed, not just credit</div></div>
-        <div class="stat-item"><div class="stat-num">60%</div><div class="stat-desc">Of applicants that don't qualify — screened out before a costly pull</div></div>
+        <div class="stat-item"><div class="stat-num">60%</div><div class="stat-desc">Of applicants screened out before a costly pull</div></div>
       </div>
     </div>
   </section>
 
-  <!-- REFERRAL LINK GENERATOR -->
   <section class="section ref-section">
     <div class="section-inner">
       <div class="ref-inner">
         <div class="section-tag" style="text-align:center">For Realtors & Loan Officers</div>
         <h2 style="text-align:center">Get Your Personal Screening Link</h2>
-        <p class="section-sub" style="margin:0 auto;text-align:center">Share a custom link with every buyer. When they complete the check, you'll receive a copy of their readiness report automatically.</p>
+        <p class="section-sub" style="margin:0 auto;text-align:center">Share a custom link with every buyer. When they complete the check, you'll receive their readiness report automatically.</p>
         <div class="ref-box">
           <label>Your Name (used in the link)</label>
           <div class="ref-row">
@@ -629,21 +455,19 @@
     </div>
   </section>
 
-  <!-- FINAL CTA -->
   <section class="section waitlist">
     <div class="section-inner">
       <div class="section-tag" style="color:var(--teal)">Free Pilot</div>
       <h2>Ready to see your score?</h2>
       <p class="section-sub">During our pilot, the check is completely free. Takes less than 60 seconds and won't affect your credit.</p>
       <button class="btn-primary" onclick="showForm()" style="font-size:1.05rem;padding:1.1rem 2.5rem;">Check My Home Buying Readiness</button>
-      <p class="privacy-note" style="margin-top:1rem;">No credit impact · Secure & encrypted · FCRA compliant</p>
+      <p style="color:rgba(255,255,255,0.25);font-size:0.75rem;margin-top:1rem;">No credit impact · Secure & encrypted · FCRA compliant</p>
     </div>
   </section>
 
   <footer>
     <p>© 2025 <span>CredPath</span> · This is a pilot program. Results are informational only and do not constitute a loan offer, pre-approval, or guarantee of financing.<br>
-    CredPath is not a lender, broker, or credit repair organization. ·
-    <a href="#" style="color:var(--teal)">Privacy Policy</a> · <a href="#" style="color:var(--teal)">Terms of Use</a></p>
+    CredPath is not a lender, broker, or credit repair organization. · <a href="#" style="color:var(--teal)">Privacy Policy</a> · <a href="#" style="color:var(--teal)">Terms of Use</a></p>
   </footer>
 </div>
 
@@ -662,12 +486,13 @@
       <div class="prog-seg" id="prog-3"></div>
       <div class="prog-seg" id="prog-4"></div>
       <div class="prog-seg" id="prog-5"></div>
+      <div class="prog-seg" id="prog-6"></div>
     </div>
 
-    <!-- STEP 1 -->
+    <!-- STEP 1: Basic Info -->
     <div class="form-step active" id="step-1">
       <div class="step-heading">Let's start with the basics</div>
-      <div class="step-sub">Step 1 of 5 — Your personal information</div>
+      <div class="step-sub">Step 1 of 6 — Your personal information</div>
       <div class="field-row">
         <div class="field"><label>First Name *</label><input type="text" id="f-first" placeholder="Jane"/></div>
         <div class="field"><label>Last Name *</label><input type="text" id="f-last" placeholder="Smith"/></div>
@@ -677,10 +502,10 @@
       <div class="form-nav"><div></div><button class="next-btn" onclick="nextStep(1)">Continue →</button></div>
     </div>
 
-    <!-- STEP 2 -->
+    <!-- STEP 2: Identity -->
     <div class="form-step" id="step-2">
       <div class="step-heading">Identity verification</div>
-      <div class="step-sub">Step 2 of 5 — Required to run your soft credit check</div>
+      <div class="step-sub">Step 2 of 6 — Required to run your soft credit check</div>
       <div class="field"><label>Current Street Address *</label><input type="text" id="f-addr" placeholder="123 Main St, City, State, ZIP"/></div>
       <div class="field-row">
         <div class="field"><label>Date of Birth *</label><input type="date" id="f-dob"/></div>
@@ -693,10 +518,33 @@
       </div>
     </div>
 
-    <!-- STEP 3: Income & DTI -->
+    <!-- STEP 3: Credit Score Range -->
     <div class="form-step" id="step-3">
+      <div class="step-heading">Your credit score range</div>
+      <div class="step-sub">Step 3 of 6 — Select your best estimate</div>
+      <div class="field">
+        <label>What is your estimated credit score?</label>
+        <p style="font-size:0.78rem;color:var(--slate);margin-bottom:0.75rem;">You can check for free on Credit Karma or your bank app. This helps us give you a more accurate readiness score.</p>
+        <div class="choices" id="credit-choices">
+          <div class="choice-item" onclick="selectChoice('creditRange','760+',this)"><div class="choice-dot"></div><span class="choice-label">760 or above — Excellent</span></div>
+          <div class="choice-item" onclick="selectChoice('creditRange','720-759',this)"><div class="choice-dot"></div><span class="choice-label">720 – 759 — Very Good</span></div>
+          <div class="choice-item" onclick="selectChoice('creditRange','680-719',this)"><div class="choice-dot"></div><span class="choice-label">680 – 719 — Good</span></div>
+          <div class="choice-item" onclick="selectChoice('creditRange','640-679',this)"><div class="choice-dot"></div><span class="choice-label">640 – 679 — Fair</span></div>
+          <div class="choice-item" onclick="selectChoice('creditRange','600-639',this)"><div class="choice-dot"></div><span class="choice-label">600 – 639 — Below Average</span></div>
+          <div class="choice-item" onclick="selectChoice('creditRange','below-600',this)"><div class="choice-dot"></div><span class="choice-label">Below 600 — Needs Work</span></div>
+          <div class="choice-item" onclick="selectChoice('creditRange','unsure',this)"><div class="choice-dot"></div><span class="choice-label">I'm not sure</span></div>
+        </div>
+      </div>
+      <div class="form-nav">
+        <button class="back-btn" onclick="prevStep(3)">← Back</button>
+        <button class="next-btn" onclick="nextStep(3)">Continue →</button>
+      </div>
+    </div>
+
+    <!-- STEP 4: Income & DTI -->
+    <div class="form-step" id="step-4">
       <div class="step-heading">Income & monthly obligations</div>
-      <div class="step-sub">Step 3 of 5 — Helps estimate your debt-to-income ratio</div>
+      <div class="step-sub">Step 4 of 6 — Helps estimate your debt-to-income ratio</div>
       <div class="field">
         <label>How do you receive your income?</label>
         <div class="choices" id="income-type-choices">
@@ -729,15 +577,15 @@
       </div>
       <div class="ssn-note" style="margin-top:1rem;">Income figures are self-reported and used only to estimate your debt-to-income ratio. This is not income verification.</div>
       <div class="form-nav">
-        <button class="back-btn" onclick="prevStep(3)">← Back</button>
-        <button class="next-btn" onclick="nextStep(3)">Continue →</button>
+        <button class="back-btn" onclick="prevStep(4)">← Back</button>
+        <button class="next-btn" onclick="nextStep(4)">Continue →</button>
       </div>
     </div>
 
-    <!-- STEP 4: Goals -->
-    <div class="form-step" id="step-4">
+    <!-- STEP 5: Goals -->
+    <div class="form-step" id="step-5">
       <div class="step-heading">Tell us about your goals</div>
-      <div class="step-sub">Step 4 of 5 — Helps us tailor your results</div>
+      <div class="step-sub">Step 5 of 6 — Helps us tailor your results</div>
       <div class="field">
         <label>When are you hoping to buy a home?</label>
         <div class="choices" id="timeline-choices">
@@ -756,15 +604,15 @@
         </div>
       </div>
       <div class="form-nav">
-        <button class="back-btn" onclick="prevStep(4)">← Back</button>
-        <button class="next-btn" onclick="nextStep(4)">Continue →</button>
+        <button class="back-btn" onclick="prevStep(5)">← Back</button>
+        <button class="next-btn" onclick="nextStep(5)">Continue →</button>
       </div>
     </div>
 
-    <!-- STEP 5: Consent -->
-    <div class="form-step" id="step-5">
+    <!-- STEP 6: Consent -->
+    <div class="form-step" id="step-6">
       <div class="step-heading">Almost done — just one more step</div>
-      <div class="step-sub">Step 5 of 5 — Review and authorize</div>
+      <div class="step-sub">Step 6 of 6 — Review and authorize</div>
       <div class="consent-box">
         <strong>Soft Credit Check Authorization</strong><br/><br/>
         By submitting this form, you authorize CredPath to obtain your credit profile through a soft inquiry with the national credit bureaus. <strong>This soft inquiry will not affect your credit score</strong> and will not be visible to lenders.<br/><br/>
@@ -779,7 +627,7 @@
       </div>
       <p style="text-align:center;font-size:0.75rem;color:var(--slate);margin-top:0.75rem;">Results are for informational purposes only and do not constitute a loan offer or approval.</p>
       <div class="form-nav" style="margin-top:1rem;">
-        <button class="back-btn" onclick="prevStep(5)">← Back</button>
+        <button class="back-btn" onclick="prevStep(6)">← Back</button>
       </div>
     </div>
   </div>
@@ -809,50 +657,35 @@
     <div style="text-align:center;margin-bottom:1.75rem;">
       <span class="status-badge" id="status-badge">Calculating...</span>
     </div>
-    <div class="factor-card" id="loan-programs-card">
-      <h3>Likely Loan Programs</h3>
-      <div class="loan-chips" id="loan-chips"></div>
-    </div>
-    <div class="factor-card">
-      <h3>Score Breakdown</h3>
-      <div id="factor-rows"></div>
-    </div>
-    <div class="next-steps-card">
-      <h3>Your Recommended Next Steps</h3>
-      <div id="next-steps-list"></div>
-    </div>
+    <div class="factor-card" id="loan-programs-card"><h3>Likely Loan Programs</h3><div class="loan-chips" id="loan-chips"></div></div>
+    <div class="factor-card"><h3>Score Breakdown</h3><div id="factor-rows"></div></div>
+    <div class="next-steps-card"><h3>Your Recommended Next Steps</h3><div id="next-steps-list"></div></div>
     <div class="results-actions">
       <button class="action-btn action-primary" onclick="window.print()">📄 Download Report</button>
       <button class="action-btn action-secondary" onclick="shareResults()">📤 Share with Realtor</button>
     </div>
     <div class="retake-btn" onclick="retake()">← Start a new check</div>
     <div style="text-align:center;margin-top:2rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,0.07);">
-      <p style="color:rgba(255,255,255,0.25);font-size:0.75rem;line-height:1.7;">
-        CredPath is a pilot program. Results are informational only and do not constitute a loan offer,<br>
-        pre-approval, or guarantee of financing. Not a lender or broker.
-      </p>
+      <p style="color:rgba(255,255,255,0.25);font-size:0.75rem;line-height:1.7;">CredPath is a pilot program. Results are informational only and do not constitute a loan offer,<br>pre-approval, or guarantee of financing. Not a lender or broker.</p>
     </div>
   </div>
 </div>
 
 <script>
-// ═══════════════════ STATE ═══════════════════
 const state = {
   page: 'landing', step: 1, referrer: null,
-  choices: { timeline: null, lender: null, incomeType: null, monthlyDebt: null },
+  choices: { creditRange: null, timeline: null, lender: null, incomeType: null, monthlyDebt: null },
   formData: {}
 };
 
-// ═══════════════════ NAVIGATION ═══════════════════
 function showPage(id) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   document.getElementById('page-' + id).classList.add('active');
   window.scrollTo(0, 0);
-  state.page = id;
 }
 function showForm() { showPage('form'); goToStep(1); }
 function retake() {
-  state.choices = { timeline: null, lender: null, incomeType: null, monthlyDebt: null };
+  state.choices = { creditRange: null, timeline: null, lender: null, incomeType: null, monthlyDebt: null };
   state.formData = {};
   document.getElementById('consent-box').checked = false;
   document.getElementById('submit-btn').disabled = true;
@@ -866,12 +699,11 @@ function retake() {
   showPage('landing');
 }
 
-// ═══════════════════ FORM STEPS ═══════════════════
 function goToStep(n) {
   document.querySelectorAll('.form-step').forEach(s => s.classList.remove('active'));
   document.getElementById('step-' + n).classList.add('active');
   state.step = n;
-  for (let i = 1; i <= 5; i++) document.getElementById('prog-' + i).classList.toggle('done', i <= n);
+  for (let i = 1; i <= 6; i++) document.getElementById('prog-' + i).classList.toggle('done', i <= n);
   window.scrollTo(0, 0);
 }
 function prevStep(from) { goToStep(from - 1); }
@@ -890,6 +722,9 @@ function nextStep(from) {
     if (!addr || !dob || ssn.length !== 4 || isNaN(ssn)) { alert('Please complete all fields. SSN must be exactly 4 digits.'); return; }
   }
   if (from === 3) {
+    if (!state.choices.creditRange) { alert('Please select your estimated credit score range.'); return; }
+  }
+  if (from === 4) {
     if (!state.choices.incomeType) { alert('Please select your income type.'); return; }
     if (!state.choices.monthlyDebt) { alert('Please select your estimated monthly debt payments.'); return; }
     if (state.choices.incomeType === 'hourly') {
@@ -898,7 +733,7 @@ function nextStep(from) {
       if (!document.getElementById('f-annual').value) { alert('Please enter your annual income.'); return; }
     }
   }
-  if (from === 4) {
+  if (from === 5) {
     if (!state.choices.timeline || !state.choices.lender) { alert('Please answer both questions to continue.'); return; }
   }
   goToStep(from + 1);
@@ -925,7 +760,6 @@ function checkConsent() {
   document.getElementById('submit-btn').disabled = !document.getElementById('consent-box').checked;
 }
 
-// ═══════════════════ INCOME / DTI ═══════════════════
 function getMonthlyIncome() {
   const type = state.choices.incomeType;
   if (type === 'hourly') {
@@ -936,28 +770,27 @@ function getMonthlyIncome() {
   return (parseFloat(document.getElementById('f-annual').value) || 0) / 12;
 }
 function getMonthlyDebt() {
-  return { 'under500': 250, '500-1000': 750, '1000-1500': 1250, '1500-2000': 1750, 'over2000': 2500 }[state.choices.monthlyDebt] || 0;
+  return { 'under500':250, '500-1000':750, '1000-1500':1250, '1500-2000':1750, 'over2000':2500 }[state.choices.monthlyDebt] || 0;
 }
 
-// ═══════════════════ SCORING ═══════════════════
 function calculateScore(data) {
   const creditMap = {
-    '760+':    { score: 35, label: 'Excellent (760+)', width: 100 },
-    '720-759': { score: 31, label: 'Very Strong (720–759)', width: 90 },
-    '680-719': { score: 26, label: 'Strong (680–719)', width: 75 },
-    '640-679': { score: 18, label: 'Fair (640–679)', width: 52 },
-    '600-639': { score: 13, label: 'Below Average (600–639)', width: 37 },
-    'below-600': { score: 4, label: 'Needs Work (<600)', width: 15 },
-    'unsure':  { score: 16, label: 'Unknown — Estimated Fair', width: 46 }
+    '760+':     { score: 35, label: 'Excellent (760+)', width: 100 },
+    '720-759':  { score: 31, label: 'Very Strong (720–759)', width: 90 },
+    '680-719':  { score: 26, label: 'Strong (680–719)', width: 75 },
+    '640-679':  { score: 18, label: 'Fair (640–679)', width: 52 },
+    '600-639':  { score: 13, label: 'Below Average (600–639)', width: 37 },
+    'below-600':{ score: 4,  label: 'Needs Work (<600)', width: 15 },
+    'unsure':   { score: 16, label: 'Unknown — Estimated Fair', width: 46 }
   };
   const cr = creditMap[data.creditRange] || creditMap['unsure'];
   const cp = cr.score;
 
-  let up, ul, uw, pp, pl, pw, ap, al, aw, dp, dl, dw;
-  if (cp >= 31)      { up=15; ul='Low (Est. <30%)'; uw=90; pp=15; pl='Strong History'; pw=90; ap=8; al='Good (Est. 5+ yrs)'; aw=80; dp=9; dl='No Major Items'; dw=90; }
-  else if (cp >= 24) { up=11; ul='Moderate (Est. 30–50%)'; uw=68; pp=11; pl='Mostly On Time'; pw=68; ap=6; al='Moderate (Est. 3–5 yrs)'; aw=58; dp=6; dl='Minor Items Possible'; dw=65; }
-  else if (cp >= 16) { up=7;  ul='High (Est. 50–75%)'; uw=45; pp=7;  pl='Some Late Payments'; pw=45; ap=4; al='Shorter History'; aw=38; dp=3; dl='Some Derogatory Items'; dw=35; }
-  else               { up=3;  ul='Very High (Est. 75%+)'; uw=20; pp=3;  pl='Multiple Late Payments'; pw=20; ap=2; al='Limited History'; aw=18; dp=1; dl='Significant Items'; dw=10; }
+  let up,ul,uw, pp,pl,pw, ap,al,aw, dp,dl,dw;
+  if (cp >= 31)      { up=15;ul='Low (Est. <30%)';uw=90; pp=15;pl='Strong History';pw=90; ap=8;al='Good (Est. 5+ yrs)';aw=80; dp=9;dl='No Major Items';dw=90; }
+  else if (cp >= 24) { up=11;ul='Moderate (Est. 30–50%)';uw=68; pp=11;pl='Mostly On Time';pw=68; ap=6;al='Moderate (Est. 3–5 yrs)';aw=58; dp=6;dl='Minor Items Possible';dw=65; }
+  else if (cp >= 16) { up=7; ul='High (Est. 50–75%)';uw=45; pp=7; pl='Some Late Payments';pw=45; ap=4;al='Shorter History';aw=38; dp=3;dl='Some Derogatory Items';dw=35; }
+  else               { up=3; ul='Very High (Est. 75%+)';uw=20; pp=3; pl='Multiple Late Payments';pw=20; ap=2;al='Limited History';aw=18; dp=1;dl='Significant Items';dw=10; }
 
   const mi = data.monthlyIncome || 0;
   const md = data.monthlyDebt || 0;
@@ -973,22 +806,22 @@ function calculateScore(data) {
 
   const total = Math.min(100, cp + up + pp + ap + dp + dtiPts);
 
-  let affordMin = 0, affordMax = 0;
+  let affordMin=0, affordMax=0;
   if (mi > 0) {
     const ai = mi * 12;
-    affordMin = Math.round((ai * (cp >= 31 ? 3.5 : cp >= 24 ? 3.0 : 2.5)) / 10000) * 10000;
-    affordMax = Math.round((ai * (cp >= 31 ? 5.0 : cp >= 24 ? 4.0 : 3.0)) / 10000) * 10000;
+    affordMin = Math.round((ai * (cp>=31?3.5:cp>=24?3.0:2.5)) / 10000) * 10000;
+    affordMax = Math.round((ai * (cp>=31?5.0:cp>=24?4.0:3.0)) / 10000) * 10000;
   }
 
   return {
     total, dti, monthlyIncome: mi, affordMin, affordMax,
     factors: [
-      { name: 'Credit Score', val: cr.label, width: cr.width, color: cp >= 26 ? 'teal' : cp >= 16 ? 'yellow' : 'red' },
-      { name: 'Debt-to-Income (DTI)', val: dtiLabel, width: dtiWidth, color: dtiColor },
-      { name: 'Credit Utilization', val: ul, width: uw, color: up >= 11 ? 'teal' : up >= 7 ? 'yellow' : 'red' },
-      { name: 'Payment History', val: pl, width: pw, color: pp >= 11 ? 'teal' : pp >= 7 ? 'yellow' : 'red' },
-      { name: 'Credit Age', val: al, width: aw, color: ap >= 6 ? 'teal' : ap >= 4 ? 'yellow' : 'red' },
-      { name: 'Derogatory Marks', val: dl, width: dw, color: dp >= 6 ? 'teal' : dp >= 3 ? 'yellow' : 'red' }
+      { name: 'Credit Score',          val: cr.label, width: cr.width, color: cp>=26?'teal':cp>=16?'yellow':'red' },
+      { name: 'Debt-to-Income (DTI)',  val: dtiLabel,  width: dtiWidth, color: dtiColor },
+      { name: 'Credit Utilization',    val: ul,        width: uw,       color: up>=11?'teal':up>=7?'yellow':'red' },
+      { name: 'Payment History',       val: pl,        width: pw,       color: pp>=11?'teal':pp>=7?'yellow':'red' },
+      { name: 'Credit Age',            val: al,        width: aw,       color: ap>=6?'teal':ap>=4?'yellow':'red' },
+      { name: 'Derogatory Marks',      val: dl,        width: dw,       color: dp>=6?'teal':dp>=3?'yellow':'red' }
     ]
   };
 }
@@ -1004,23 +837,22 @@ function getTier(score) {
 function getNextSteps(score, timeline, lender) {
   const steps = [];
   if (score >= 70) {
-    steps.push({ icon: '✅', text: '<strong>Connect with a loan officer</strong> — Your profile looks promising. A loan officer can review your full application and get you pre-approved.' });
-    if (!lender || lender === 'no') steps.push({ icon: '🤝', text: '<strong>Find a loan officer</strong> — We can connect you with a local professional who specializes in buyers at your readiness level.' });
-    steps.push({ icon: '🏠', text: '<strong>Start working with a realtor</strong> — Share this report with your agent so they know your buying power and price range.' });
+    steps.push({ icon:'✅', text:'<strong>Connect with a loan officer</strong> — Your profile looks promising. A loan officer can review your full application and get you pre-approved.' });
+    if (!lender || lender === 'no') steps.push({ icon:'🤝', text:'<strong>Find a loan officer</strong> — We can connect you with a local professional who specializes in buyers at your readiness level.' });
+    steps.push({ icon:'🏠', text:'<strong>Start working with a realtor</strong> — Share this report with your agent so they know your buying power and price range.' });
   } else if (score >= 55) {
-    steps.push({ icon: '📈', text: '<strong>Reduce credit utilization</strong> — Aim to keep card balances below 30% of your limits. This can improve your score quickly.' });
-    steps.push({ icon: '⏱️', text: '<strong>Continue on-time payments</strong> — 6 months of consistent payments can meaningfully improve your readiness score.' });
-    steps.push({ icon: '🤝', text: '<strong>Talk to a loan officer</strong> — FHA loans are available with lower credit requirements. An officer can outline your options.' });
+    steps.push({ icon:'📈', text:'<strong>Reduce credit utilization</strong> — Aim to keep card balances below 30% of your limits. This can improve your score quickly.' });
+    steps.push({ icon:'⏱️', text:'<strong>Continue on-time payments</strong> — 6 months of consistent payments can meaningfully improve your readiness score.' });
+    steps.push({ icon:'🤝', text:'<strong>Talk to a loan officer</strong> — FHA loans are available with lower credit requirements. An officer can outline your options.' });
   } else {
-    steps.push({ icon: '📉', text: '<strong>Focus on credit repair</strong> — Address any collections or derogatory items. Consider working with a credit counselor.' });
-    steps.push({ icon: '📈', text: '<strong>Build payment history</strong> — 12 months of on-time payments is the fastest way to improve mortgage readiness.' });
-    steps.push({ icon: '💳', text: '<strong>Reduce outstanding debt</strong> — Lowering your debt-to-income ratio significantly improves mortgage eligibility.' });
-    steps.push({ icon: '🔔', text: '<strong>Re-check in 90 days</strong> — Credit improvement takes time. Come back in 3 months to track your progress.' });
+    steps.push({ icon:'📉', text:'<strong>Focus on credit repair</strong> — Address any collections or derogatory items. Consider working with a credit counselor.' });
+    steps.push({ icon:'📈', text:'<strong>Build payment history</strong> — 12 months of on-time payments is the fastest way to improve mortgage readiness.' });
+    steps.push({ icon:'💳', text:'<strong>Reduce outstanding debt</strong> — Lowering your debt-to-income ratio significantly improves mortgage eligibility.' });
+    steps.push({ icon:'🔔', text:'<strong>Re-check in 90 days</strong> — Credit improvement takes time. Come back in 3 months to track your progress.' });
   }
   return steps;
 }
 
-// ═══════════════════ SUBMIT ═══════════════════
 function submitForm() {
   const btn = document.getElementById('submit-btn');
   btn.textContent = '⏳ Analyzing your credit profile...';
@@ -1039,7 +871,7 @@ function submitForm() {
     creditRange: state.choices.creditRange || 'unsure',
     incomeType: state.choices.incomeType,
     monthlyIncome, monthlyDebt,
-    estimatedDTI: monthlyIncome > 0 ? ((monthlyDebt / monthlyIncome) * 100).toFixed(1) + '%' : 'N/A',
+    estimatedDTI: monthlyIncome > 0 ? ((monthlyDebt/monthlyIncome)*100).toFixed(1)+'%' : 'N/A',
     timeline: state.choices.timeline,
     lender: state.choices.lender,
     referrer: state.referrer || 'Direct'
@@ -1055,9 +887,10 @@ function submitForm() {
       Phone: state.formData.phone || 'Not provided',
       Address: state.formData.address,
       'Date of Birth': state.formData.dob,
+      'Credit Score Range': state.formData.creditRange,
       'Income Type': state.formData.incomeType,
-      'Est. Monthly Income': monthlyIncome ? '$' + Math.round(monthlyIncome).toLocaleString() : 'Not provided',
-      'Est. Monthly Debt': monthlyDebt ? '$' + monthlyDebt.toLocaleString() : 'Not provided',
+      'Est. Monthly Income': monthlyIncome ? '$'+Math.round(monthlyIncome).toLocaleString() : 'Not provided',
+      'Est. Monthly Debt': monthlyDebt ? '$'+monthlyDebt.toLocaleString() : 'Not provided',
       'Estimated DTI': state.formData.estimatedDTI,
       'Buying Timeline': state.formData.timeline,
       'Has Loan Officer': state.formData.lender,
@@ -1069,16 +902,15 @@ function submitForm() {
   setTimeout(() => { renderResults(state.formData); showPage('results'); }, 2200);
 }
 
-// ═══════════════════ RENDER RESULTS ═══════════════════
 function renderResults(data) {
   const result = calculateScore(data);
   const tier = getTier(result.total);
   const steps = getNextSteps(result.total, data.timeline, data.lender);
   const firstName = data.firstName || 'Buyer';
 
-  document.getElementById('result-name-tag').textContent = firstName + ' ' + (data.lastName || '') + ' — Home Buying Readiness Report';
+  document.getElementById('result-name-tag').textContent = firstName + ' ' + (data.lastName||'') + ' — Home Buying Readiness Report';
   document.getElementById('result-heading').textContent = 'Your CredPath Score';
-  document.getElementById('result-date').textContent = 'Generated ' + new Date().toLocaleDateString('en-US', { year:'numeric', month:'long', day:'numeric' });
+  document.getElementById('result-date').textContent = 'Generated ' + new Date().toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'});
 
   const ring = document.getElementById('big-ring');
   ring.style.background = `conic-gradient(var(--teal) 0% ${result.total}%, rgba(255,255,255,0.07) ${result.total}% 100%)`;
@@ -1090,39 +922,36 @@ function renderResults(data) {
 
   let affordHTML = '';
   if (result.affordMin > 0) {
-    affordHTML += `
-      <div style="margin-top:1.25rem;padding-top:1.25rem;border-top:1px solid rgba(255,255,255,0.08);">
-        <div style="color:rgba(255,255,255,0.5);font-size:0.72rem;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.35rem;">Est. Home Price Range</div>
-        <div style="color:var(--teal);font-size:1.55rem;font-weight:700;font-family:'DM Serif Display',serif;">$${result.affordMin.toLocaleString()} – $${result.affordMax.toLocaleString()}</div>
-        <div style="color:rgba(255,255,255,0.3);font-size:0.7rem;margin-top:0.25rem;">Based on self-reported income & credit profile. Not a loan offer.</div>
-      </div>`;
+    affordHTML += `<div style="margin-top:1.25rem;padding-top:1.25rem;border-top:1px solid rgba(255,255,255,0.08);">
+      <div style="color:rgba(255,255,255,0.5);font-size:0.72rem;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.35rem;">Est. Home Price Range</div>
+      <div style="color:var(--teal);font-size:1.55rem;font-weight:700;font-family:'DM Serif Display',serif;">$${result.affordMin.toLocaleString()} – $${result.affordMax.toLocaleString()}</div>
+      <div style="color:rgba(255,255,255,0.3);font-size:0.7rem;margin-top:0.25rem;">Based on self-reported income & credit profile. Not a loan offer.</div>
+    </div>`;
   }
   if (result.dti !== null) {
     const dtiColor = result.dti < 36 ? 'var(--teal)' : result.dti < 43 ? 'var(--gold)' : '#e05c5c';
-    affordHTML += `
-      <div style="margin-top:1rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,0.08);">
-        <div style="color:rgba(255,255,255,0.5);font-size:0.72rem;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.35rem;">Est. Debt-to-Income Ratio</div>
-        <div style="color:${dtiColor};font-size:1.4rem;font-weight:700;">${result.dti.toFixed(1)}%</div>
-        <div style="color:rgba(255,255,255,0.3);font-size:0.7rem;margin-top:0.25rem;">Most lenders prefer DTI below 43%. Based on self-reported figures only.</div>
-      </div>`;
+    affordHTML += `<div style="margin-top:1rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,0.08);">
+      <div style="color:rgba(255,255,255,0.5);font-size:0.72rem;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.35rem;">Est. Debt-to-Income Ratio</div>
+      <div style="color:${dtiColor};font-size:1.4rem;font-weight:700;">${result.dti.toFixed(1)}%</div>
+      <div style="color:rgba(255,255,255,0.3);font-size:0.7rem;margin-top:0.25rem;">Most lenders prefer DTI below 43%. Based on self-reported figures only.</div>
+    </div>`;
   }
 
   const loanHTML = tier.loans.length > 0
-    ? tier.loans.map(l => `<span class="loan-chip">${l}</span>`).join('')
+    ? tier.loans.map(l=>`<span class="loan-chip">${l}</span>`).join('')
     : '<span style="color:rgba(255,255,255,0.45);font-size:0.85rem;">Focus on credit improvement before applying</span>';
-
   document.getElementById('loan-programs-card').innerHTML = `<h3>Likely Loan Programs</h3><div class="loan-chips">${loanHTML}</div>${affordHTML}`;
 
-  document.getElementById('factor-rows').innerHTML = result.factors.map(f => `
+  document.getElementById('factor-rows').innerHTML = result.factors.map(f=>`
     <div class="factor-row">
       <div class="factor-name">${f.name}</div>
       <div class="factor-right">
         <div class="factor-val">${f.val}</div>
-        <div class="fbar"><div class="fbar-fill ${f.color === 'yellow' ? 'yellow' : f.color === 'red' ? 'red' : ''}" style="width:${f.width}%"></div></div>
+        <div class="fbar"><div class="fbar-fill ${f.color==='yellow'?'yellow':f.color==='red'?'red':''}" style="width:${f.width}%"></div></div>
       </div>
     </div>`).join('');
 
-  document.getElementById('next-steps-list').innerHTML = steps.map(s => `
+  document.getElementById('next-steps-list').innerHTML = steps.map(s=>`
     <div class="next-step-item">
       <span class="nsi-icon">${s.icon}</span>
       <div class="nsi-text">${s.text}</div>
@@ -1134,9 +963,8 @@ function renderResults(data) {
   }
 }
 
-// ═══════════════════ REFERRAL ═══════════════════
 function generateRef() {
-  const name = document.getElementById('refName').value.trim().toLowerCase().replace(/\s+/g, '-');
+  const name = document.getElementById('refName').value.trim().toLowerCase().replace(/\s+/g,'-');
   if (!name) { alert('Please enter your name first.'); return; }
   const link = window.location.href.split('?')[0] + '?ref=' + encodeURIComponent(name);
   document.getElementById('refLinkText').textContent = link;
@@ -1157,7 +985,6 @@ function shareResults() {
   else { navigator.clipboard.writeText(text); alert('Report summary copied to clipboard!'); }
 }
 
-// ═══════════════════ INIT ═══════════════════
 window.addEventListener('DOMContentLoaded', () => {
   const params = new URLSearchParams(window.location.search);
   const ref = params.get('ref');
@@ -1167,8 +994,8 @@ window.addEventListener('DOMContentLoaded', () => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.style.opacity='1'; e.target.style.transform='translateY(0)'; } });
   }, { threshold: 0.1 });
   document.querySelectorAll('.step, .audience-card, .rating-chip').forEach(el => {
-    el.style.opacity = '0'; el.style.transform = 'translateY(20px)';
-    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    el.style.opacity='0'; el.style.transform='translateY(20px)';
+    el.style.transition='opacity 0.5s ease, transform 0.5s ease';
     obs.observe(el);
   });
 });
